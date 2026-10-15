@@ -87,7 +87,7 @@ export default function Header() {
               <img
                 src="/images/smart_hitech_logo.png"
                 alt="Smart Hitech Engineering Logo"
-                className="h-10 sm:h-14 w-auto object-contain rounded"
+                className="h-20 sm:h-14 w-auto object-contain rounded"
               />
             </a>
 

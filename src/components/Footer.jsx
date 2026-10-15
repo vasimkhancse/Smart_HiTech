@@ -21,7 +21,7 @@ export default function Footer() {
                 className="h-12 w-auto rounded bg-white p-1"
               />
               <span className="text-white text-base sm:text-lg font-black tracking-tight">
-                SMART HI-TECH ENGG.
+                SMART&nbsp;&nbsp;&nbsp;HI-TECH&nbsp;&nbsp;&nbsp;ENGG.
               </span>
             </div>
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
