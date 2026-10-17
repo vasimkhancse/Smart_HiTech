@@ -6,7 +6,6 @@ import GallerySection from './components/GallerySection';
 import AboutCompany from './components/AboutCompany';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import MobileQuickBar from './components/MobileQuickBar';
 
 function App() {
   const [activeLightbox, setActiveLightbox] = useState(null);

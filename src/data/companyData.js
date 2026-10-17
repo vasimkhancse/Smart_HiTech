@@ -73,7 +73,7 @@ export const PRODUCTS_SERVICES = [
       "Beveling and edge preparation for seamless circumferential welding",
       "Ultrasonic tested materials for high-pressure boilers and vessels"
     ],
-    image: "/images/dished_heads.jpg",
+    image: "/images/product_dish_head.jpeg",
     badge: "Specialized Capacity"
   },
   {
@@ -92,8 +92,8 @@ export const PRODUCTS_SERVICES = [
       "Hydrostatically tested up to 1.5x working pressure",
       "Rugged structural tripod / skirt leg support as shown in workshop photos"
     ],
-    image: "/images/filter_vessels_1.jpg",
-    secondaryImage: "/images/filter_vessels_2.jpg",
+    image: "/images/product_filter_vessels.jpeg",
+    secondaryImage: "/images/product_filter_vessels_secondary.jpeg",
     badge: "In-House Fabricated"
   },
   {
@@ -112,7 +112,7 @@ export const PRODUCTS_SERVICES = [
       "Uniform curvature without distortion or surface gouging",
       "Fast turnaround for serial manufacturing and urgent job work"
     ],
-    image: "/images/sheet_rolling.jpg",
+    image: "/images/product_sheet_rolling.jpeg",
     badge: "3mm – 8mm Range"
   },
   {
@@ -131,7 +131,7 @@ export const PRODUCTS_SERVICES = [
       "Ideal for heating coils, exhaust loops, handrails, and industrial pipelines",
       "CNC / hydraulic precision repeat bends"
     ],
-    image: "/images/pipe_bending.jpg",
+    image: "/images/product_pipe_bending.jpeg",
     badge: "1\" to 4\" OD"
   },
   {
@@ -150,7 +150,7 @@ export const PRODUCTS_SERVICES = [
       "Full 360° welded rings with machining allowances",
       "Bulk capacity for construction, cranes, circular silos, and machinery"
     ],
-    image: "/images/pipe_bending.jpg",
+    image: "/images/product_section_rolling.jpeg",
     badge: "All Profiles"
   },
   {
@@ -169,7 +169,7 @@ export const PRODUCTS_SERVICES = [
       "Protective surface coatings: primer, red oxide, epoxy, polyurethane",
       "Over 12 years of proven reliability in Coimbatore's engineering corridor"
     ],
-    image: "/images/industrial_fabrication.jpg",
+    image: "/images/product_heavy_fabrication.jpeg",
     badge: "Custom Engineering"
   }
 ];
@@ -177,45 +177,136 @@ export const PRODUCTS_SERVICES = [
 export const GALLERY_ITEMS = [
   {
     id: "g1",
-    title: "Dual Sand & Carbon Filter Pressure Vessels",
+    title: "Dual Sand & Carbon Filter Pressure Vessels with Frontal Manifold",
     category: "Filter Vessels",
-    image: "/images/filter_vessels_1.jpg",
-    desc: "Actual in-house fabricated twin filter vessels with interconnecting piping, tripod legs and safety flanges at our Chinnavedampatti yard."
+    image: "/images/gallery_filter_01.jpeg",
+    desc: "In-house fabricated twin yellow filter vessels with complete interconnecting piping, valves, bolted flanges, and tripod leg supports."
   },
   {
     id: "g2",
-    title: "Sand Filter Vessel Fabrication & Yard Assembly",
+    title: "Dual Horizontal Pressure Filter Vessels with Nozzles",
     category: "Filter Vessels",
-    image: "/images/filter_vessels_2.jpg",
-    desc: "Full yard view of custom yellow industrial filter pressure vessels engineered to client specifications."
+    image: "/images/gallery_filter_02.jpeg",
+    desc: "Pair of horizontal coated pressure filter vessels with flanged inspection nozzles, end dished heads, and heavy support feet."
   },
   {
     id: "g3",
-    title: "Precision Dish Head Lineup",
-    category: "Dish Heads",
-    image: "/images/dished_heads.jpg",
-    desc: "Torispherical and ellipsoidal dished ends from 140 mm up to 3,000 mm diameter with uniform wall thickness."
+    title: "Industrial Filter Vessel Side Shell & Bolted Handhole Assembly",
+    category: "Filter Vessels",
+    image: "/images/gallery_filter_03.jpeg",
+    desc: "Detailed view of the bolted manhole cover, lateral connections, and durable industrial finish engineered for water treatment systems."
   },
   {
     id: "g4",
-    title: "Heavy 3-Roll Plate & Sheet Rolling Machine",
-    category: "Sheet Rolling",
-    image: "/images/sheet_rolling.jpg",
-    desc: "Forming thick steel plates into pressure vessel cylinders and cylindrical storage shells."
+    title: "Vertical Air Receiver & Pressure Storage Vessel",
+    category: "Filter Vessels",
+    image: "/images/gallery_filter_04.jpeg",
+    desc: "Vertical cylindrical pressure receiver finished in high-grade coating with formed dished bottom head and tripod mountings."
   },
   {
     id: "g5",
-    title: "Heavy Profile & Section Rolling (I-Beam & Channel)",
-    category: "Rolling Works",
-    image: "/images/pipe_bending.jpg",
-    desc: "Curving heavy structural I-beams, L-angles, and steel pipes with specialized section bending rollers."
+    title: "Precision Spun Dished Head with Calibrated Inspection Markings",
+    category: "Dish Heads",
+    image: "/images/gallery_dish_01.jpeg",
+    desc: "Deep bowl dished head formed to exact dimensional radius with inspection graduation marks inside the workshop."
   },
   {
     id: "g6",
-    title: "Industrial Welding & Pressure Vessel Assembly",
+    title: "Clean Stack of Formed Dish Ends with Beveled Edges",
+    category: "Dish Heads",
+    image: "/images/gallery_dish_02.jpeg",
+    desc: "Torispherical dished heads showing consistent crown and knuckle contour with smooth edge preparation for circumferential welding."
+  },
+  {
+    id: "g7",
+    title: "High-Capacity Dished Heads Array in Workshop Yard",
+    category: "Dish Heads",
+    image: "/images/gallery_dish_03.jpeg",
+    desc: "Multiple dish heads in various diameters and plate thicknesses ready for boiler and pressure vessel manufacturing."
+  },
+  {
+    id: "g8",
+    title: "Heavy Tonnage Dished End Prepared for Customer Logistics",
+    category: "Dish Heads",
+    image: "/images/gallery_dish_04.jpeg",
+    desc: "Extra-large diameter dished end safely secured on heavy transport vehicle outside Smart Hi-Tech workshop facility."
+  },
+  {
+    id: "g9",
+    title: "Workshop Plate Rolling Operation on 3-Roll Machine",
+    category: "Sheet Rolling",
+    image: "/images/gallery_rolling_01.jpeg",
+    desc: "Experienced technicians operating the 3-roller plate bending machine to form wide steel plates with accurate radius control."
+  },
+  {
+    id: "g10",
+    title: "Large-Diameter Cylindrical Shell Bending",
+    category: "Sheet Rolling",
+    image: "/images/gallery_rolling_02.jpeg",
+    desc: "Heavy plate rolling of full-round cylindrical shells for storage tanks and pressure vessel body sections."
+  },
+  {
+    id: "g11",
+    title: "Sheet Rolled Stainless Steel Cones & Reducers",
+    category: "Sheet Rolling",
+    image: "/images/gallery_rolling_03.jpeg",
+    desc: "Precision cold formed truncated conical reducers and hoppers with tight longitudinal seams."
+  },
+  {
+    id: "g12",
+    title: "Heavy Gauge Plate Curving in 3-Roll Cold Roller",
+    category: "Sheet Rolling",
+    image: "/images/gallery_rolling_04.jpeg",
+    desc: "Night-shift plate bending operation delivering uniform curvature without flat edges or surface gouging."
+  },
+  {
+    id: "g13",
+    title: "Precision Rolled Circular Steel Rings & Flanges",
+    category: "Rolling Works",
+    image: "/images/gallery_section_01.jpeg",
+    desc: "Uniformly rolled steel rings and circular flanges formed with zero twist for industrial machinery and vessel mounts."
+  },
+  {
+    id: "g14",
+    title: "Heavy Flat Bar & Structural Section Curving",
+    category: "Rolling Works",
+    image: "/images/gallery_section_02.jpeg",
+    desc: "Structural flat and angle curving on dedicated section roll tooling preventing inner flange distortion."
+  },
+  {
+    id: "g15",
+    title: "Curved Structural Steel Bars for Machinery Frames",
+    category: "Rolling Works",
+    image: "/images/gallery_section_03.jpeg",
+    desc: "Heavy-duty curved square and rectangular structural profiles calibrated to exact template radii."
+  },
+  {
+    id: "g16",
+    title: "Heavy Industrial Autoclave & Pressure Vessel Hoisting",
     category: "Fabrication",
-    image: "/images/industrial_fabrication.jpg",
-    desc: "Skilled welders joining dish heads to rolled cylindrical shells under strict quality supervision."
+    image: "/images/gallery_fab_01.jpeg",
+    desc: "Massive dual dished end pressure vessel equipped with multiple heavy duty flanged nozzles being hoisted in the fabrication yard."
+  },
+  {
+    id: "g17",
+    title: "Large Industrial Storage Shell Longitudinal Seam Welding",
+    category: "Fabrication",
+    image: "/images/gallery_fab_02.jpeg",
+    desc: "Certified welders performing high-penetration seam welding on full-length cylindrical vessel shells inside the workshop."
+  },
+  {
+    id: "g18",
+    title: "ACE Mobile Crane Erection & Heavy Vessel Handling",
+    category: "Fabrication",
+    image: "/images/gallery_fab_03.jpeg",
+    desc: "Rigging and crane mobilization for heavy industrial equipment handling and positioning at the Chinnavedampatti plant."
+  },
+  {
+    id: "g19",
+    title: "Custom Stiffened Industrial Tank Transport Rigging",
+    category: "Fabrication",
+    image: "/images/gallery_fab_04.jpeg",
+    desc: "Turnkey fabricated rectangular and U-shaped industrial tanks with heavy structural stiffening beams loaded for dispatch."
   }
 ];
 

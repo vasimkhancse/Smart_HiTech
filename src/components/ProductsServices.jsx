@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import { PRODUCTS_SERVICES, COMPANY_INFO } from '../data/companyData';
 import { 
   CheckCircle2, 
   MessageCircle, 
-  Phone,
-  Wrench
+  Phone, 
+  Wrench 
 } from 'lucide-react';
 
 export default function ProductsServices() {
+  const [selectedImages, setSelectedImages] = useState({});
+
+  const getActiveImage = (product) => {
+    return selectedImages[product.id] || product.image;
+  };
+
   const getWhatsAppLink = (product) => {
     const text = encodeURIComponent(
       `Hello Smart Hi-Tech Engineering,\nI am interested in getting information for *${product.title}*.\nPlease share technical details and capacity availability.`
@@ -31,23 +38,54 @@ export default function ProductsServices() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {PRODUCTS_SERVICES.map((product) => (
-            <article 
-              key={product.id} 
-              id={product.id}
-              className="bg-white border border-metallic-200 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 shadow-sm hover:shadow-xl hover:border-primary-light hover:-translate-y-1.5 scroll-mt-24 group"
-            >
-              <div className="relative h-56 overflow-hidden bg-metallic-900">
-                <img 
-                  src={product.image} 
-                  alt={product.title} 
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute top-3.5 right-3.5 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold tracking-wide backdrop-blur-sm shadow-md">
-                  {product.badge}
-                </span>
-              </div>
+          {PRODUCTS_SERVICES.map((product) => {
+            const activeImg = getActiveImage(product);
+            return (
+              <article 
+                key={product.id} 
+                id={product.id}
+                className="bg-white border border-metallic-200 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 shadow-sm hover:shadow-xl hover:border-primary-light hover:-translate-y-1.5 scroll-mt-24 group"
+              >
+                <div className="relative h-56 overflow-hidden bg-metallic-900">
+                  <img 
+                    src={activeImg} 
+                    alt={product.title} 
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute top-3.5 right-3.5 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold tracking-wide backdrop-blur-sm shadow-md z-10">
+                    {product.badge}
+                  </span>
+
+                  {product.secondaryImage && (
+                    <div className="absolute bottom-3 right-3 flex gap-1 z-10 bg-black/70 backdrop-blur-md p-1 rounded-lg border border-white/20">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedImages(prev => ({ ...prev, [product.id]: product.image }));
+                        }}
+                        className={`px-2 py-0.5 rounded text-[10px] font-bold transition-colors cursor-pointer ${
+                          activeImg === product.image ? 'bg-primary text-white shadow-sm' : 'text-slate-300 hover:text-white'
+                        }`}
+                      >
+                        View 1
+                      </button>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedImages(prev => ({ ...prev, [product.id]: product.secondaryImage }));
+                        }}
+                        className={`px-2 py-0.5 rounded text-[10px] font-bold transition-colors cursor-pointer ${
+                          activeImg === product.secondaryImage ? 'bg-primary text-white shadow-sm' : 'text-slate-300 hover:text-white'
+                        }`}
+                      >
+                        View 2
+                      </button>
+                    </div>
+                  )}
+                </div>
 
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-extrabold text-metallic-900 mb-2 leading-snug">
@@ -100,7 +138,8 @@ export default function ProductsServices() {
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

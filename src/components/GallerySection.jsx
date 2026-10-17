@@ -27,21 +27,31 @@ export default function GallerySection({ activeLightbox, onCloseLightbox, onOpen
           </p>
         </div>
 
-        {/* Filter buttons */}
+        {/* Filter buttons with item counts */}
         <div className="flex justify-center flex-wrap gap-2.5 mb-10">
-          {CATEGORIES.map((cat, idx) => (
-            <button
-              key={idx}
-              onClick={() => setSelectedCat(cat)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border cursor-pointer ${
-                selectedCat === cat
-                  ? 'bg-primary text-white border-primary shadow-md shadow-blue-900/20'
-                  : 'bg-white text-metallic-700 border-metallic-300 hover:border-primary hover:text-primary'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {CATEGORIES.map((cat, idx) => {
+            const count = cat === 'All' 
+              ? GALLERY_ITEMS.length 
+              : GALLERY_ITEMS.filter(item => item.category === cat).length;
+            return (
+              <button
+                key={idx}
+                onClick={() => setSelectedCat(cat)}
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border cursor-pointer flex items-center gap-2 ${
+                  selectedCat === cat
+                    ? 'bg-primary text-white border-primary shadow-md shadow-blue-900/20'
+                    : 'bg-white text-metallic-700 border-metallic-300 hover:border-primary hover:text-primary'
+                }`}
+              >
+                <span>{cat}</span>
+                <span className={`text-[11px] px-2 py-0.5 rounded-full font-bold ${
+                  selectedCat === cat ? 'bg-white/25 text-white' : 'bg-metallic-200 text-metallic-700'
+                }`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Gallery Grid */}
@@ -49,7 +59,7 @@ export default function GallerySection({ activeLightbox, onCloseLightbox, onOpen
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="relative rounded-2xl overflow-hidden shadow-sm border border-metallic-200 bg-metallic-900 cursor-pointer aspect-[16/10] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary group"
+              className="relative rounded-2xl overflow-hidden shadow-sm border border-metallic-200 bg-metallic-900 cursor-pointer aspect-[16/11] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-primary group"
               onClick={() => onOpenLightbox(item.image, item.title, item.desc)}
             >
               <img 
@@ -58,15 +68,7 @@ export default function GallerySection({ activeLightbox, onCloseLightbox, onOpen
                 loading="lazy" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/40 to-transparent p-5 flex flex-col justify-end text-white">
-                <span className="self-start text-[11px] font-bold uppercase bg-blue-600/90 text-white px-2.5 py-0.5 rounded-full mb-1.5 tracking-wider backdrop-blur-sm">
-                  {item.category}
-                </span>
-                <h4 className="text-base font-bold text-white mb-1 leading-snug group-hover:text-blue-200 transition-colors">
-                  {item.title}
-                </h4>
-                
-              </div>
+           
             </div>
           ))}
         </div>

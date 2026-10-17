@@ -13,16 +13,37 @@ export default function AboutCompany() {
     <section id="about" className="py-16 md:py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Image with Experience Badge */}
+          {/* Left Column: Image Composition with Experience Badge */}
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl border border-metallic-200 h-80 sm:h-[420px]">
+            <div className="rounded-3xl overflow-hidden shadow-2xl border border-metallic-200 h-80 sm:h-[440px] bg-metallic-900 group relative">
               <img 
-                src="/images/dished_heads.jpg" 
-                alt="Smart Hi-Tech Engineering Workshop and Dished Heads" 
-                className="w-full h-full object-cover"
+                src="/images/about_facility_press.jpeg" 
+                alt="Smart Hi-Tech Engineering Workshop Heavy Hydraulic Press and Fabrication Facility" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-full font-semibold border border-white/20 flex items-center gap-1.5">
+                <Factory size={14} className="text-blue-400" /> Chinnavedampatti Plant
+              </div>
             </div>
-            <div className="absolute -bottom-5 right-5 sm:right-8 bg-gradient-to-r from-[#0b4db7] via-[#1e40af] to-[#0369a1] text-white p-5 sm:p-6 rounded-2xl shadow-2xl border-2 border-white/30 text-center">
+
+            {/* Inset Secondary Image Card: Technicians at Work */}
+            <div className="hidden sm:flex absolute -bottom-6 -left-6 w-48 lg:w-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white flex-col z-20">
+              <div className="h-28 overflow-hidden">
+                <img 
+                  src="/images/about_workshop_team.jpeg" 
+                  alt="Technicians operating 3-roll plate bending machine" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-2.5 bg-slate-900 text-white">
+                <div className="text-[11px] font-bold text-sky-400 leading-tight">In-House Rolling Works</div>
+                <div className="text-[10px] text-slate-300 leading-tight mt-0.5">Hydraulic Plate Bending</div>
+              </div>
+            </div>
+
+            {/* Experience Badge */}
+            <div className="absolute -bottom-5 right-5 sm:right-6 bg-gradient-to-r from-[#0b4db7] via-[#1e40af] to-[#0369a1] text-white p-5 sm:p-6 rounded-2xl shadow-2xl border-2 border-white/30 text-center z-20">
               <div className="font-heading text-3xl sm:text-4xl font-black leading-none">12+</div>
               <div className="text-xs uppercase tracking-wider text-blue-200 mt-1.5 font-semibold">Years of Craftsmanship</div>
               <div className="text-[11px] text-blue-100 mt-0.5">

@@ -2,12 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import {
   ArrowRight,
   ChevronLeft,
-  ChevronRight,
-  Phone,
-  MessageCircle,
-  Sparkles
+  ChevronRight
 } from 'lucide-react';
-import { COMPANY_INFO } from '../data/companyData';
 
 const BANNERS = [
   {
@@ -17,7 +13,7 @@ const BANNERS = [
     title: 'Dish Head / Dished Head',
     subtitle: 'Precision Hydraulic Pressed & Spun Heads',
     desc: 'Manufactured for pressure vessels, boilers, and industrial tanks according to ASME and DIN standards with edge weld beveling.',
-    image: '/images/dished_heads.jpg',
+    image: '/images/hero_dish_head.jpeg',
     actionText: 'Explore Dish Heads'
   },
   {
@@ -27,7 +23,7 @@ const BANNERS = [
     title: 'Sand Filter & Carbon Filter Vessels',
     subtitle: 'Industrial Water & Process Treatment Vessels',
     desc: 'Complete pressure filter vessels with interconnecting frontal manifolds, distribution laterals, tripod legs, and hydrostatic testing.',
-    image: '/images/filter_vessels_1.jpg',
+    image: '/images/hero_filter_vessels.jpeg',
     actionText: 'View Filter Vessels'
   },
   {
@@ -37,7 +33,7 @@ const BANNERS = [
     title: 'Sheet Rolling & Structural Section Works',
     subtitle: 'L-Angle • I-Beam • C-Channel • MS Flat Rolling',
     desc: '3-roller cold plate bending for cylinders/cones and specialized hydraulic section rolling preventing flange distortion.',
-    image: '/images/sheet_rolling.jpg',
+    image: '/images/hero_plate_rolling.jpeg',
     actionText: 'View Rolling Works'
   }
 ];
